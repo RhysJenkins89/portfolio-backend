@@ -9,13 +9,8 @@ app.get("/", (req, res) => {
     res.sendFile("views/test.html", { root: __dirname });
 });
 
-app.post("/test", (req, res) => {
+app.post("/form", (req, res) => {
     console.log(req.body);
-    res.redirect("/");
-});
-
-app.get("/download", (req, res) => {
-    res.download("rhys-jenkins-cv.pdf");
 });
 
 app.listen(port, () => {
